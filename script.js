@@ -21,19 +21,24 @@ else {
 //FizzBuzz game
 
 let number =parseInt(prompt("Enter your number: \n "));
-let initial = 1;
 
-while (number >= initial) {
-    initial++;
-    console.log(initial);
-    if(initial % 15 == 0){
-        console.log("FizzBuzz");
-    }
-    else if (initial%3 == 0){
-        console.log("Fizz");
-    }
-    else if (initial%5 == 0){
-    console.log("Buzz");
-    }
+function FizzBuzz(initial = 1) {
+    while (number > initial) {
+        initial++;
+        
+        if(initial % 15 == 0){
+            console.log("FizzBuzz");
+        }
+        else if (initial%3 == 0){
+            console.log("Fizz");
+        }
+        else if (initial%5 == 0){
+        console.log("Buzz");
+        }
+        else {
+            console.log(initial);
+        }
+}
 }
 
+FizzBuzz();
